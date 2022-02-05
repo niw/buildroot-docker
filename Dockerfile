@@ -30,7 +30,7 @@ RUN \
 # See <https://buildroot.org/download.html>.
 RUN \
   git clone http://github.com/buildroot/buildroot \
-    --branch 2021.05.x \
+    --branch 2021.11.x \
     --single-branch \
     --depth=1 \
     /buildroot
