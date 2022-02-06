@@ -35,8 +35,9 @@ $ make BR2_EXTERNAL=/linux-on-litex-vexriscv/buildroot litex_vexriscv_defconfig
 $ make
 ```
 
-Then you will get `Images`, `root.cpio`, place them in
-`/path/to/linux-on-litex-vexriscv/images`.
+Then you will get `Images`, `rootfs.cpio`, place them in
+`/linux-on-litex-vexriscv/images`, which is mounted to
+`/path/to/linux-on-litex-vexriscv`.
 
 Then, use `lxterm --images images/boot.json ...` or write them in a SD
 Card and boot from the SD Card.
