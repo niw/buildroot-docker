@@ -39,5 +39,5 @@ Then you will get `Images`, `rootfs.cpio`, place them in
 `/linux-on-litex-vexriscv/images`, which is mounted to
 `/path/to/linux-on-litex-vexriscv`.
 
-Then, use `lxterm --images images/boot.json ...` or write them in a SD
+Then, use `litex_term --images images/boot.json ...` or write them in a SD
 Card and boot from the SD Card.
