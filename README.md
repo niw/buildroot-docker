@@ -29,15 +29,22 @@ make image volumes run
 This is an example usage to build Linux image for
 [Linux on LiteX VexRiscv](https://github.com/litex-hub/linux-on-litex-vexriscv).
 
+Run Buildroot Docker container.
+
 ```
 $ make run ARGS='-v /path/to/linux-on-litex-vexriscv:/linux-on-litex-vexriscv'
+```
+
+In Docker container, run Buildroot.
+
+```
 $ make BR2_EXTERNAL=/linux-on-litex-vexriscv/buildroot litex_vexriscv_defconfig
 $ make
 ```
 
-Then you will get `Images`, `rootfs.cpio`, place them in
-`/linux-on-litex-vexriscv/images`, which is mounted to
-`/path/to/linux-on-litex-vexriscv`.
-
-Then, use `litex_term --images images/boot.json ...` or write them in a SD
-Card and boot from the SD Card.
+It builds `fw_jump.bin`, `Images`, and `rootfs.cpio`, places them in
+`/output/images` where is mounted from `images` also place symlinks in
+`/linux-on-litex-vexriscv/images` where is mounted from
+`/path/to/linux-on-litex-vexriscv/images`,
+but these are pointing the locaiton in container thus replace them with
+the one in `images`.
