@@ -1,14 +1,14 @@
-From 14f7eac479db7d907fe8d60914b146ad206521fd Mon Sep 17 00:00:00 2001
+From 5c7eb6eaab7c85593bf413a3164749b17b26ead2 Mon Sep 17 00:00:00 2001
 From: Yoshimasa Niwa <niw@niw.at>
-Date: Sun, 8 Aug 2021 22:55:50 -0700
+Date: Thu, 7 Dec 2023 21:52:22 -0800
 Subject: [PATCH] Forcibly use `/output` as `O`.
 
 
 diff --git a/Makefile b/Makefile
-index 255d37e74f..eb0191715e 100644
+index fcd48bdcad..7483c2fdee 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -32,12 +32,7 @@ SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
+@@ -30,12 +30,7 @@ SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
  	 else if [ -x /bin/bash ]; then echo /bin/bash; \
  	 else echo sh; fi; fi)
  

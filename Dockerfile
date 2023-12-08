@@ -29,8 +29,8 @@ RUN \
 # Use the latest stable release.
 # See <https://buildroot.org/download.html>.
 RUN \
-  git clone http://github.com/buildroot/buildroot \
-    --branch 2021.11.x \
+  git clone https://gitlab.com/buildroot.org/buildroot.git \
+    --branch 2023.02.x\
     --single-branch \
     --depth=1 \
     /buildroot
